@@ -10,6 +10,6 @@ class Cart extends Model
         return $this->hasMany('App\Models\Item');
     }
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Models\User');
     }
 }

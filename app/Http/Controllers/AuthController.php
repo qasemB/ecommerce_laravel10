@@ -101,7 +101,7 @@ class AuthController extends Controller
             return response()->json($validator->errors() , 202);
         }
 
-//        dd($request->all());
+        //dd($request->all());
         if (Auth::attempt(['phone' => $request->phone, 'password' => $request->password])) {
             $user = Auth::user();
             $tokenRes = $user->createToken('personalToken');
